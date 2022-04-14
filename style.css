@@ -28,7 +28,10 @@ header ion-icon{
 
 main{
     padding-top: 26px;
+    overflow-y:scroll;
+    overflow-x: hidden;
     height: 507px;
+    
     
 }
 main li{
@@ -49,6 +52,12 @@ li .horario{
 }
 li .remetente,li .destinatario{
     font: normal 700 14px 'Roboto', sans-serif; 
+}
+.status{
+    background-color: #DCDCDC;
+}
+.private-message{
+    background-color: #FFDEDE;
 }
 
 footer{
