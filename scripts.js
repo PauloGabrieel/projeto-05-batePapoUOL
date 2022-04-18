@@ -11,9 +11,6 @@ function logar(){
     entrarNoChat();
 }
 
-// const perguntaNomeUsuario = prompt("Olá, qual é seu nome ?"); 
-// const usuario = {name: perguntaNomeUsuario};
-
 
 
 
@@ -36,27 +33,27 @@ function tratarError(error){
     }
 }
 
-function tratarSucesso(response){
+function tratarSucesso(){
     statusConexao();
     buscarMensagens();
 
 }
 function statusConexao(){
     const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/status", {name: nomeUsuario});
-    promise.then(function(){setTimeout(statusConexao,4000)});
+    promise.then(setTimeout(statusConexao,4000));
     promise.catch(errorManterConexao);
     
 }
 
 
 function errorManterConexao(error){
-    console.log(error)
+    console.log(error);
 }
 function buscarMensagens(){
     
     const promise = axios.get("https://mock-api.driven.com.br/api/v6/uol/messages");
-    promise.then(carregarMensagems)
-    promise.catch(tratarErrorMensagens)
+    promise.then(carregarMensagems);
+    promise.catch(tratarErrorMensagens);
     
 }
 
@@ -103,7 +100,7 @@ function renderizarMensagens(){
         }
     }
     ulMensagens.scrollIntoView({block: "end", behavior: "smooth"});
-    setTimeout(buscarMensagens,10000);
+    setTimeout(buscarMensagens, 3000);
 
     
 }    
@@ -128,20 +125,5 @@ function enviarMensagem(){
 }
 
 function tratarErroEnvioMsg(){
-
+    window.location.reload();
 }
-
-
-// entrarNoChat();
-// buscarMensagens();
-
-// promise.then(EntrarNoChat)
-// function EntrarNoChat(){
-
-
-
-// function enviarMensagem(){
-//     const mensagem = document.querySelector("input").value;
-//     let feedMsg = document.querySelector("ul"); 
-    
-//     feedMsg.innerHTML +=` 

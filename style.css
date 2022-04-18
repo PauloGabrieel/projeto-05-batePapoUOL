@@ -14,8 +14,12 @@ ul{
     height: 667px;
     margin: 10% auto;
     background-color: rgba(255, 255, 255, 0.26);
+    position: relative;
     
 }
+
+
+
 .tela-de-login{
     display: flex;
     flex-direction: column;
@@ -71,17 +75,23 @@ header{
 }
 header ion-icon{
     font-size: 45px;
+    cursor: pointer;
 }
 
 main{
     padding-top: 26px;
     overflow-y:scroll;
-    overflow-x: hidden;
+    overflow-wrap: break-word;
     height: 507px;
     
     
 }
-
+.menu-configuracao{
+    background-color: #fff;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
 main li{
     display: flex;
     align-items: center;
@@ -89,6 +99,7 @@ main li{
     background-color: #fff;
     margin: 4px 0;
     padding: 0 9px;
+    overflow-wrap: break-word;
     
 }
 li {
