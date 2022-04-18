@@ -95,7 +95,7 @@ main{
 main li{
     display: flex;
     align-items: center;
-    height: 40px;
+    min-height: 40px;
     background-color: #fff;
     margin: 4px 0;
     padding: 0 9px;
@@ -107,23 +107,26 @@ li {
     gap:5px;
     font: normal 400 14px 'Roboto', sans-serif;
     word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 
 }
 li .horario{
     color: lightslategrey;
-    word-wrap: break-word;
+    
+
 }
 li .remetente,li .destinatario{
     font: normal 700 14px 'Roboto', sans-serif; 
-    word-wrap: break-word;
+   
 }
 .status{
     background-color: #DCDCDC;
-    word-wrap: break-word;
+    
 }
 .private-message{
     background-color: #FFDEDE;
-    word-wrap: break-word;
+    
 }
 
 footer{
@@ -153,7 +156,4 @@ footer input:focus{
 footer ion-icon{
     font-size:26px;
     cursor: pointer;
-}
-div{
-    word-wrap: break-word;
 }

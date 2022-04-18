@@ -112,16 +112,17 @@ function tratarErrorMensagens(error){
 }
 
 function enviarMensagem(){
-    let mensagem = document.querySelector("footer input").value;
-
+    let mensagem = document.querySelector("footer input");
+    
     const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", {
         from: nomeUsuario,
         to: "todos",
-        text: mensagem,
+        text: mensagem.value,
         type: "message"
     });
     promise.then(buscarMensagens);
     promise.catch(tratarErroEnvioMsg);
+    mensagem.value ="";
 }
 
 function tratarErroEnvioMsg(){
