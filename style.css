@@ -5,6 +5,10 @@ body{
     background-color: #E5E5E5;
     font-family: 'Roboto', sans-serif;
 }
+ul{
+    
+    list-style: none;
+}
 .container, .tela-de-login{
     max-width: 375px;
     height: 667px;
@@ -85,23 +89,30 @@ main li{
     background-color: #fff;
     margin: 4px 0;
     padding: 0 9px;
+    
 }
 li {
-    display: flex;
+   display: flex;
     gap:5px;
     font: normal 400 14px 'Roboto', sans-serif;
+    word-wrap: break-word;
+
 }
 li .horario{
-    color: lightslategrey
+    color: lightslategrey;
+    word-wrap: break-word;
 }
 li .remetente,li .destinatario{
     font: normal 700 14px 'Roboto', sans-serif; 
+    word-wrap: break-word;
 }
 .status{
     background-color: #DCDCDC;
+    word-wrap: break-word;
 }
 .private-message{
     background-color: #FFDEDE;
+    word-wrap: break-word;
 }
 
 footer{
@@ -130,4 +141,8 @@ footer input:focus{
 
 footer ion-icon{
     font-size:26px;
+    cursor: pointer;
+}
+div{
+    word-wrap: break-word;
 }
